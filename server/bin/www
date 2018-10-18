@@ -34,7 +34,7 @@ const normalizePort = val => {
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(process.env.PORT || '8081');
+const port = normalizePort(process.env.PORT || '80');
 
 /**
  * Event listener for HTTP server "listening" event.

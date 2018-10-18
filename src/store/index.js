@@ -1,18 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import about from './module/about'
 Vue.use(Vuex)
 
-export function createStore() {
+export function createStore () {
   return new Vuex.Store({
     state: {
-      test: 'test'
+
     },
     mutations: {
 
     },
     actions: {
 
+    },
+    modules: {
+      about
     }
   })
 }

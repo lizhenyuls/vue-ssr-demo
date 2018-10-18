@@ -7,11 +7,12 @@
     "build:client": "cross-env VUE_ENV=web vue-cli-service build",
     "build:server": "cross-env VUE_ENV=node vue-cli-service build",
     "build": "npm run build:server && move dist\\vue-ssr-server-bundle.json bundle && npm run build:client && move bundle dist\\vue-ssr-server-bundle.json",
-    "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "server": "node server/bin/www"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
     "html-minifier": "^3.5.20",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
@@ -20,31 +21,16 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
-    "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-plugin-unit-jest": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "cross-env": "^5.2.0",
-    "lint-staged": "^7.2.2",
     "lodash.merge": "^4.6.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.4",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17",
     "webpack-node-externals": "^1.7.2"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   }
 }
