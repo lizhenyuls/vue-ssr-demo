@@ -11,7 +11,7 @@
     "server": "node server/bin/www"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^4.16.4",
     "html-minifier": "^3.5.20",
     "vue": "^2.5.17",
