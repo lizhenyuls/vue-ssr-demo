@@ -28,7 +28,7 @@
     "babel-jest": "^23.0.1",
     "cross-env": "^5.2.0",
     "lodash.merge": "^4.6.2",
-    "node-sass": "^4.9.4",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17",
     "webpack-node-externals": "^1.7.2"
